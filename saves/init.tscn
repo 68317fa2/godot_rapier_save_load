@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://b05buqvo0roy1"]
+
+[ext_resource type="PackedScene" uid="uid://dutk5o3lsjlbf" path="res://scenes/box.tscn" id="1_dfdrc"]
+[ext_resource type="Script" uid="uid://22s71qwov5gq" path="res://scripts/physics_hasher.gd" id="2_t6lw1"]
+
+[node name="Init" type="Node2D" unique_id=1474453583]
+
+[node name="Box" parent="." unique_id=1434000206 instance=ExtResource("1_dfdrc")]
+position = Vector2(-56, -5)
+
+[node name="Box2" parent="." unique_id=2113885873 instance=ExtResource("1_dfdrc")]
+position = Vector2(98, 5)
+linear_velocity = Vector2(-200, 0)
+
+[node name="Box3" parent="." unique_id=333466275 instance=ExtResource("1_dfdrc")]
+position = Vector2(-13, 9)
+
+[node name="Node2D" type="Node2D" parent="." unique_id=448840820]
+script = ExtResource("2_t6lw1")

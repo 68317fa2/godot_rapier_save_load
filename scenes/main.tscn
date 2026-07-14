@@ -1,0 +1,12 @@
+[gd_scene format=3 uid="uid://dfygufga6lpst"]
+
+[ext_resource type="Script" uid="uid://cocajxdb3a7lp" path="res://scripts/main.gd" id="1_o5qli"]
+
+[node name="Main" type="Node2D" unique_id=509409958 node_paths=PackedStringArray("rapier_state")]
+script = ExtResource("1_o5qli")
+rapier_state = NodePath("StateManager2D")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1059294105]
+
+[node name="StateManager2D" type="StateManager2D" parent="." unique_id=986427001 node_paths=PackedStringArray("root_node")]
+root_node = NodePath("..")
