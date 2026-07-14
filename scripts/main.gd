@@ -18,7 +18,7 @@ func _ready():
   if Static.next_scene:
     load_save(Static.next_scene)
   else:
-    load_save("init")
+    load_save("test2")
 
 func load_save(path: String):
   # reset things (only done when reload_scene_on_load == false)

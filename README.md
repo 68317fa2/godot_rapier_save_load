@@ -10,4 +10,16 @@
 - load scene with `Ctrl-L`
 - save scene with `Ctrl-S` (per default into `res://scenes/test.tscn`)
 
+- when the loaded scenes contain different objects, errors are thrown on subsequent loads:
+```
+  <godot_rapier::bodies::rapier_collision_object_base::RapierCollisionObjectBase as core::ops::drop::Drop>::drop: Body leaked
+  <C++ Source>  src/bodies/rapier_collision_object_base.rs:601 @ <godot_rapier::bodies::rapier_collision_object_base::RapierCollisionObjectBase as core::ops::drop::Drop>::drop()
+```
+- also, the `rapier_state.import_state()` function does not work correctly if the bodies differ from the previously loaded scene
+  - as seen through `diff logs/state_a.txt logs/state_b.txt`, the imported `physics_objects_state` is empty
+- to reproduce the bug:
+  - set `load_save("test2")` in `main.gd`, line 21
+  - run the DEBUG mode
+  - load the scene with `Ctrl-L` twice
+  - observe the bug
 
