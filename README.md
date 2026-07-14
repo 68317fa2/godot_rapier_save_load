@@ -9,7 +9,6 @@
 ## tutorial
 - load scene with `Ctrl-L`
 - save scene with `Ctrl-S` (per default into `res://scenes/test.tscn`)
-
 - when the loaded scenes contain different objects, errors are thrown on subsequent loads:
 ```
   <godot_rapier::bodies::rapier_collision_object_base::RapierCollisionObjectBase as core::ops::drop::Drop>::drop: Body leaked
